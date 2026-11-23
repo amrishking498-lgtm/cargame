@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Midnight Drive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Midnight Drive</h1>
+    <p class="subtitle">Highway Racing Challenge</p>
+
+    <div class="score-board">
+        <div>Score: <span id="score">0</span></div>
+        <div>Best: <span id="best">0</span></div>
+    </div>
+
+    <div class="game-box">
+
+        <div class="road" id="road">
+
+            <div class="road-line line-one"></div>
+            <div class="road-line line-two"></div>
+
+            <div id="player" class="car player-car">
+                <div class="window"></div>
+            </div>
+
+            <div id="enemy" class="car enemy-car">
+                <div class="window"></div>
+            </div>
+
+            <div id="message" class="message">
+                <h2>Ready to Drive?</h2>
+                <p>Use Arrow Keys to move your car</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="controls">
+        <button id="startBtn">Start Game</button>
+        <button id="restartBtn">Restart</button>
+    </div>
+
+    <p class="instruction">
+        Use ← Left and → Right Arrow Keys to control your car.
+    </p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

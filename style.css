@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #17212b;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #f5c542;
+    margin-top: 20px;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #b8c5d1;
+    margin: 8px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin: 20px;
+    font-size: 19px;
+    color: #f5c542;
+}
+
+.game-box {
+    display: flex;
+    justify-content: center;
+}
+
+.road {
+    width: 300px;
+    height: 450px;
+    background-color: #444;
+    border-left: 7px solid #ddd;
+    border-right: 7px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+
+.road-line {
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: repeating-linear-gradient(
+        to bottom,
+        white 0px,
+        white 35px,
+        transparent 35px,
+        transparent 70px
+    );
+    animation: moveRoad 0.7s linear infinite;
+}
+
+.line-one {
+    left: 92px;
+}
+
+.line-two {
+    left: 192px;
+}
+
+@keyframes moveRoad {
+    from {
+        background-position-y: 0;
+    }
+
+    to {
+        background-position-y: 70px;
+    }
+}
+
+.car {
+    width: 45px;
+    height: 70px;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.player-car {
+    background-color: #e74c3c;
+    bottom: 15px;
+    left: 127px;
+    border: 2px solid white;
+}
+
+.enemy-car {
+    background-color: #2980b9;
+    top: -80px;
+    left: 25px;
+    border: 2px solid white;
+}
+
+.window {
+    width: 27px;
+    height: 20px;
+    background-color: #bde0f5;
+    margin: 8px auto;
+    border-radius: 5px;
+}
+
+.message {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 18px 5px;
+    z-index: 5;
+}
+
+.message h2 {
+    color: #f5c542;
+    margin-bottom: 10px;
+}
+
+.message p {
+    font-size: 13px;
+}
+
+.controls {
+    margin: 20px;
+}
+
+button {
+    padding: 11px 25px;
+    margin: 5px;
+    background-color: #f5c542;
+    color: #17212b;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+}
+
+.instruction {
+    color: #b8c5d1;
+    font-size: 13px;
+    margin: 15px;
+}
